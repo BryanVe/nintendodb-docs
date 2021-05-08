@@ -2,14 +2,13 @@
 import { useState, ReactNode, FC } from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
 import { ListItem, Button, Collapse } from '@material-ui/core';
+import { SvgIconComponent } from '@material-ui/icons';
 import clsx from 'clsx';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import useStyles from './styles'
-import { SvgIconComponent } from '@material-ui/icons';
-
 interface IProps {
   title?: string
   href?: string

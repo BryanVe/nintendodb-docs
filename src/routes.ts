@@ -12,6 +12,11 @@ const routes: RouteConfig[] = [
                 path: '/tables/activities',
                 exact: true,
                 component: lazy(() => import('modules/tables/Activities'))
+            },
+            {
+                path: '/tables/affiliate-vehicles',
+                exact: true,
+                component: lazy(() => import('modules/tables/AffiliateVehicles'))
             }
         ]
     }

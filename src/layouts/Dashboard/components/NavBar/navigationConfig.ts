@@ -14,6 +14,10 @@ const navigationConfig: NavigationConfig[] = [
       {
         title: 'Activities',
         href: '/tables/activities',
+      },
+      {
+        title: 'AffiliateVehicles',
+        href: '/tables/affiliate-vehicles',
       }
     ]
   }

@@ -19,24 +19,24 @@ const Dashboard: FC<RouteConfigComponentProps> = (props) => {
   };
 
   return (
-    <div className={classes.root}>
-      <NavBar
-        className={classes.navBar}
-        onMobileClose={handleNavBarMobileClose}
-        openMobile={openNavBarMobile}
-      />
-      <div className={classes.container}>
-        <main className={classes.content}>
-          <TopBar
-            className={classes.topBar}
-            onOpenNavBarMobile={handleNavBarMobileOpen}
-          />
-          <Suspense fallback={<LinearProgress />}>
-            {renderRoutes(route?.routes)}
-          </Suspense>
-        </main>
+      <div className={classes.root}>
+        <NavBar
+          className={classes.navBar}
+          onMobileClose={handleNavBarMobileClose}
+          openMobile={openNavBarMobile}
+        />
+        <div className={classes.container}>
+          <main className={classes.content}>
+            <TopBar
+              className={classes.topBar}
+              onOpenNavBarMobile={handleNavBarMobileOpen}
+            />
+            <Suspense fallback={<LinearProgress />}>
+              {renderRoutes(route?.routes)}
+            </Suspense>
+          </main>
+        </div>
       </div>
-    </div>
   );
 };
 

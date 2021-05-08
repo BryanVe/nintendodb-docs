@@ -6,84 +6,97 @@ const typography = {
     fontWeight: 500,
     fontSize: '35px',
     letterSpacing: '-0.24px',
-    lineHeight: '40px'
+    lineHeight: '40px',
+    fontFamily: 'Lato'
   },
   h2: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '29px',
     letterSpacing: '-0.24px',
-    lineHeight: '32px'
+    lineHeight: '32px',
+    fontFamily: 'Lato'
   },
   h3: {
     color: palette.text.primary,
     fontWeight: 500,
     fontSize: '24px',
     letterSpacing: '-0.06px',
-    lineHeight: '28px'
+    lineHeight: '28px',
+    fontFamily: 'Lato'
   },
   h4: {
     color: palette.text.primary,
     fontWeight: 500,
     fontSize: '20px',
     letterSpacing: '-0.06px',
-    lineHeight: '24px'
+    lineHeight: '24px',
+    fontFamily: 'Lato'
   },
   h5: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '16px',
     letterSpacing: '-0.05px',
-    lineHeight: '20px'
+    lineHeight: '20px',
+    fontFamily: 'Lato'
   },
   h6: {
     color: palette.text.primary,
     fontWeight: 500,
     fontSize: '14px',
     letterSpacing: '-0.05px',
-    lineHeight: '20px'
+    lineHeight: '20px',
+    fontFamily: 'Lato'
   },
   subtitle1: {
     color: palette.text.primary,
     fontSize: '16px',
     letterSpacing: '-0.05px',
-    lineHeight: '25px'
+    lineHeight: '25px',
+    fontFamily: 'Lato'
   },
   subtitle2: {
     color: palette.text.secondary,
     fontWeight: 400,
     fontSize: '14px',
     letterSpacing: '-0.05px',
-    lineHeight: '21px'
+    lineHeight: '21px',
+    fontFamily: 'Lato'
   },
   body1: {
     color: palette.text.primary,
     fontSize: '14px',
     letterSpacing: '-0.05px',
-    lineHeight: '21px'
+    lineHeight: '21px',
+    fontFamily: 'Lato'
   },
   body2: {
     color: palette.text.secondary,
     fontSize: '12px',
     letterSpacing: '-0.04px',
-    lineHeight: '18px'
+    lineHeight: '18px',
+    fontFamily: 'Lato'
   },
   button: {
     color: palette.text.primary,
-    fontSize: '14px'
+    fontSize: '14px',
+    fontFamily: 'Lato'
   },
   caption: {
     color: palette.text.secondary,
     fontSize: '11px',
     letterSpacing: '0.33px',
-    lineHeight: '13px'
+    lineHeight: '13px',
+    fontFamily: 'Lato'
   },
   overline: {
     color: palette.text.secondary,
     fontSize: '11px',
     fontWeight: 500,
     letterSpacing: '0.33px',
-    lineHeight: '13px'
+    lineHeight: '13px',
+    fontFamily: 'Lato'
   }
 };
 

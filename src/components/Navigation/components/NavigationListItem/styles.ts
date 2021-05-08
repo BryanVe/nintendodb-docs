@@ -44,17 +44,14 @@ const useStyles = makeStyles(theme => ({
       height: 16,
       width: 16
     },
-    label: {
-      display: 'flex',
-      alignItems: 'center',
-      marginLeft: 'auto'
-    },
     active: {
       color: theme.palette.white.main,
-      fontWeight: theme.typography.fontWeightMedium,
       backgroundColor: theme.palette.primary.dark,
       '& $icon': {
         color: theme.palette.white.main,
+      },
+      '& .MuiButton-label': {
+        fontWeight: 600
       }
     }
   }));

@@ -8,19 +8,6 @@ const useStyles = makeStyles((theme) => ({
     content: {
       padding: theme.spacing(2)
     },
-    profile: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      minHeight: 'fit-content'
-    },
-    avatar: {
-      width: 60,
-      height: 60
-    },
-    name: {
-      marginTop: theme.spacing(1)
-    },
     divider: {
       marginTop: theme.spacing(2),
       backgroundColor: theme.palette.primary.light
