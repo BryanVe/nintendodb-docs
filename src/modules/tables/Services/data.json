@@ -1,0 +1,76 @@
+{
+   "title":"Services",
+   "description":"Tipo de servicio que el pedido se le aplica. Contiene más detalle que los generados en la tabla GeneralType.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(50)",
+         "description":"Nombre de Servicio."
+      },
+      {
+         "name":"typeID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo del servicio. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"minutes",
+         "type":"float, NULL",
+         "description":"Tiempo en minutos que toma el servicio."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del servicio. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"packageSizeIDs",
+         "type":"arreglo de int",
+         "description":"Lista de paquetes que se utilizan en el servicio. Ver a detalle en tabla Packages."
+      },
+      {
+         "name":"attentionSchedule",
+         "type":"JSONB, NULL",
+         "description":"Información del horario de actividad del servicio."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad en que se le aplica el servicio. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      },
+      {
+         "name":"minimalDistance",
+         "type":"float, NULL",
+         "description":"Distancia maxima que se utiliza en el servicio."
+      },
+      {
+         "name":"intents",
+         "type":"int, NULL",
+         "description":"Número de intentos que puede aplicarse a realizar con el servicio para reofertar."
+      },
+      {
+         "name":"extraChargeValue",
+         "type":"numeric, NULL",
+         "description":"Valor de cargo adicional aplicado al pedido por el servicio si no cumple lo indicado."
+      }
+   ]
+}

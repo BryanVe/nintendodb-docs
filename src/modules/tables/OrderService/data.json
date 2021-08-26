@@ -1,0 +1,86 @@
+{
+   "title":"OrderService",
+   "description":"Es una tabla que gestiona la relación de una orden hacia una ruta. Esto es porque un pedido puede estar en más de una ruta y una ruta tiene más de un pedido. También gestiona información básica sobre el orden con relación con la ruta a nivel operaciones: liquidación, tiempo de operación del pedido y estado de la orden.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"orderID",
+         "type":"int",
+         "description":"Índice que representa a un pedido. Ver a detalle en tabla Orders."
+      },
+      {
+         "name":"routeID",
+         "type":"int, NULL",
+         "description":"Índice que representa a un ruta. Ver a detalle en tabla Route."
+      },
+      {
+         "name":"promiseTime",
+         "type":"Timestamptz",
+         "description":"Hora y fecha esperada para iniciar la operación para el pedido."
+      },
+      {
+         "name":"startTime",
+         "type":"Timestamptz, NULL",
+         "description":"Hora y fecha real para iniciar la operación para el pedido."
+      },
+      {
+         "name":"endTime",
+         "type":"Timestamptz, NULL",
+         "description":"Hora y fecha real que finalizó la operación para el pedido"
+      },
+      {
+         "name":"lastStatusID",
+         "type":"Int",
+         "description":"Índice que representa al tipo “Estado de orden” en su último valor asignado al pedido. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"liquidationVoucher",
+         "type":"Boolean",
+         "description":"Si utilizo un voucher para liquidar la operación del pedido dentro de la ruta."
+      },
+      {
+         "name":"liquidationGuide",
+         "type":"Boolean",
+         "description":"Si utilizo una guia para liquidar la operación del pedido dentro de la ruta."
+      },
+      {
+         "name":"liquidationPackage",
+         "type":"Boolean",
+         "description":"Si utilizo el pedido fue liquidado de esta ruta."
+      },
+      {
+         "name":"liquidationDate",
+         "type":"Timestamptz, NULL",
+         "description":"Fecha en la que se realizo la liquidación."
+      },
+      {
+         "name":"deleted",
+         "type":"Boolean",
+         "description":"Verifica si el registro se elimino."
+      },
+      {
+         "name":"active",
+         "type":"Boolean",
+         "description":"Verifica si el registro esta activo o no,"
+      },
+      {
+         "name":"createdAt",
+         "type":"Timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"Timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"dateLastStatus",
+         "type":"Timestamptz, NULL",
+         "description":"Fecha del último estado asignado."
+      }
+   ]
+}

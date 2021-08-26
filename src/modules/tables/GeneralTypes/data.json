@@ -1,0 +1,46 @@
+{
+   "title":"GeneralTypes",
+   "description":"Es un tipo abstracto para los tipos con el cual puedes crear tipos diferentes según se requiera en diferentes tablas. Esto queda a generación del equipo de desarrollo de nintendo y como lo utilizan según las necesidades de las tablas. Algunos de los tipos que actualmente se tienen son:",
+   "attributes":[
+      {
+         "name":"subtype",
+         "type":"Serial",
+         "description":"Indice principal"
+      },
+      {
+         "name":"type",
+         "type":"Int",
+         "description":"Categoría del tipo que engloba un conjunto de tipos específicos. Ej. rol, Tipo de tarifa entre otros."
+      },
+      {
+         "name":"class",
+         "type":"Varchar(255)",
+         "description":"Nombre del la categoría del tipo"
+      },
+      {
+         "name":"subclass",
+         "type":"Varchar(255)",
+         "description":"Subtipo específico dentro de una categoría de tipos. Ej. en la categoría “Tipos de tarifa” están los siguientes tipos: “Tarifa fija”, “Tarifa variable”."
+      },
+      {
+         "name":"extra",
+         "type":"JSON, NULL",
+         "description":"Información extra asociada al registro para detallar su uso."
+      },
+      {
+         "name":"createdAt",
+         "type":"Timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"Timestamptz",
+         "description":"Última vez que fue actualizado el registro."
+      },
+      {
+         "name":"deleted",
+         "type":"Boolean",
+         "description":"determina si el registro es eliminado para no ser utilizado."
+      }
+   ]
+}

@@ -1,25 +1,23 @@
-import { lazy } from 'react'
 import { RouteConfig } from 'react-router-config'
 
+import dashboardNavigationConfig from 'layouts/Dashboard/components/NavBar/navigationConfig'
 import { DashboardLayout } from 'layouts'
+import { IRoute } from 'types'
+import helpers from 'helpers'
 
-const routes: RouteConfig[] = [
+const getRoutes = (): RouteConfig[] => {
+  const dashboardRoutes: IRoute[] = []
+  helpers.routes.loadLayoutRoutes(dashboardNavigationConfig, dashboardRoutes)
+  
+  const routes: RouteConfig[] = [
     {
         path: '',
         component: DashboardLayout,
-        routes: [
-            {
-                path: '/tables/activities',
-                exact: true,
-                component: lazy(() => import('modules/tables/Activities'))
-            },
-            {
-                path: '/tables/affiliate-vehicles',
-                exact: true,
-                component: lazy(() => import('modules/tables/AffiliateVehicles'))
-            }
-        ]
+        routes: dashboardRoutes
     }
-]
+  ]
 
-export default routes
+  return routes
+}
+
+export default getRoutes()

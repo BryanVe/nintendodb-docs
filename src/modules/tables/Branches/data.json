@@ -1,0 +1,76 @@
+{
+   "title":"Branches",
+   "description":"Contiene la información de una sucursal de una empresa.",
+   "attributes":[
+      {
+         "name":"branchOfficeCode",
+         "type":"varchar(255)",
+         "description":"Código de la oficina de la sucursal."
+      },
+      {
+         "name":"branchOfficeName",
+         "type":"varchar(255)",
+         "description":"Nombre de la oficina de la sucursal."
+      },
+      {
+         "name":"branchOfficeAddress",
+         "type":"varchar",
+         "description":"Dirección de la oficina de la sucursal."
+      },
+      {
+         "name":"branchOfficeAddressPoint",
+         "type":"geometry(point), NULL",
+         "description":"Ubicación geoespacial de la oficina de la sucursal."
+      },
+      {
+         "name":"serviceIDs",
+         "type":"arreglo de int, NULL",
+         "description":"Lista de servicios de los pedidos que están disponibles en esa sucursal. Ver a detalle en la tabla Services."
+      },
+      {
+         "name":"atentionDays",
+         "type":"arreglo de varchar, NULL",
+         "description":"Lista de días de atención en la sucursal."
+      },
+      {
+         "name":"atentionHours",
+         "type":"JSONB, NULL",
+         "description":"Información del horario de atención de la sucursal."
+      },
+      {
+         "name":"packageSizes",
+         "type":"arreglo de int, NULL",
+         "description":"Lista de tipos de paquetes que utilizan en esa sucursal. Ver a detalle en tabla Packages."
+      },
+      {
+         "name":"contactPeople",
+         "type":"JSONB, NULL",
+         "description":"Información de la persona de contacto de la sucursal."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int",
+         "description":"Índice la entidad que representa a la empresa que le pertenece la sucursal. Ver a detalle en la tabla Enterprises."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"cityID",
+         "type":"int, NULL",
+         "description":"Índice la entidad que representa a la ciudad en que reside la sucursal. Ver a detalle en la tabla Cities."
+      }
+   ]
+}

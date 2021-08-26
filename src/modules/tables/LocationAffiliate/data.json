@@ -1,0 +1,36 @@
+{
+   "title":"LocationAffiliate",
+   "description":"Contiene la última ubicación geográfica de un repartidor.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"affiliatedID",
+         "type":"uuid",
+         "description":"Índice de la entidad que representa un repartidor. Ver a detalle en tabla Affiliates."
+      },
+      {
+         "name":"locationPoint",
+         "type":"geometry(Point), NULL",
+         "description":"Ubicación geoespacial del repartidor donde está."
+      },
+      {
+         "name":"polygonID",
+         "type":"int, NULL",
+         "description":"Índice de entidad que representa el sector de una ciudad en que reside el repartidor. Ver a detalle en tabla Sectors."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}

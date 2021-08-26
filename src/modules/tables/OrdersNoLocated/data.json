@@ -1,0 +1,51 @@
+{
+   "title":"OrdersNoLocated",
+   "description":"Gestionar los pedidos que no contiene información original completa y que falta darle. Son pedidos que la empresa envía pero no están completos. Estas deben ser completados.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int",
+         "description":"Índice de la entidad que representa a la empresa dueña del pedido. Ver a detalle en tabla Enterprises."
+      },
+      {
+         "name":"trackCode",
+         "type":"varchar(255)",
+         "description":"Código del pedido"
+      },
+      {
+         "name":"packageQuantity",
+         "type":"int",
+         "description":"Cantidad de paquetes en el pedido."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad donde estará el pedido. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del pedido."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del pedido."
+      },
+      {
+         "name":"statusPackageID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del paquete. Ver a detalle en tabla GeneralType. (*) Posiblemente esté cambie."
+      },
+      {
+         "name":"warehouseID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el almacén donde reside el pedido. Ver a detalle en tabla warehouses."
+      }
+   ]
+}

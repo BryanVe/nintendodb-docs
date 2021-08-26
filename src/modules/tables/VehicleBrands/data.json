@@ -1,0 +1,31 @@
+{
+   "title":"VehicleBrands",
+   "description":"Es una marca empresarial para los vehículos. Ej. Toyota.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(50)",
+         "description":"Nombre de la marca."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      }
+   ]
+}

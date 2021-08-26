@@ -1,0 +1,136 @@
+{
+   "title":"Enterprises",
+   "description":"La empresa que solicita los servicios de envío de paquetes.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"documentType",
+         "type":"int",
+         "description":"Índice de la  entidad que representa el tipo de documento que utiliza la empresa para identificarse. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"documentNumber",
+         "type":"varchar(100)",
+         "description":"Número de registro en el documento de identificación de la empresa."
+      },
+      {
+         "name":"address",
+         "type":"varchar(200)",
+         "description":"Dirección de la empresa."
+      },
+      {
+         "name":"point",
+         "type":"geomtry(Point), NULL",
+         "description":"Ubicación geoespacial de la empresa."
+      },
+      {
+         "name":"businessName",
+         "type":"varchar(100)",
+         "description":"Nombre de negocios de la empresa."
+      },
+      {
+         "name":"comercialName",
+         "type":"varchar(100), NULL",
+         "description":"Nombre comercial de la empresa."
+      },
+      {
+         "name":"status",
+         "type":"int",
+         "description":"Índice de la  entidad que representa el tipo de estado de la empresa. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"countryID",
+         "type":"int",
+         "description":"Índice de la  entidad que representa el país que reside la empresa. Ver a detalle en tabla Countries."
+      },
+      {
+         "name":"cityID",
+         "type":"int, NULL",
+         "description":"Índice de la  entidad que representa la ciudad en que reside la empresa. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"integration",
+         "type":"boolean",
+         "description":"Tiene una integración con nosotros."
+      },
+      {
+         "name":"statusChangedDate",
+         "type":"timestamptz, NULL",
+         "description":"(#) Columna que no aporta información crucial."
+      },
+      {
+         "name":"contactPeople",
+         "type":"JSONB",
+         "description":"Información de la persona de contacto en la empresa."
+      },
+      {
+         "name":"enterpriseKey",
+         "type":"uuid, NULL",
+         "description":"Índice único de la empresa."
+      },
+      {
+         "name":"photo",
+         "type":"varchar(255), NULL",
+         "description":"URL de la imagen de la empresa."
+      },
+      {
+         "name":"urlWebHook",
+         "type":"varchar(200), NULL",
+         "description":"URL del webhook de notificación para la empresa."
+      },
+      {
+         "name":"serviceIDs",
+         "type":"arreglo de int, NULL",
+         "description":"Lista de servicios que la empresa solicita en sus pedidos/ordenes. Ver a detalle en tabla Services."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Verifica si el registro está eliminado o no."
+      },
+      {
+         "name":"multiplace",
+         "type":"boolean",
+         "description":"Verifica si la empresa tiene múltiples lugares o no."
+      },
+      {
+         "name":"atariID",
+         "type":"varchar, NULL",
+         "description":"Índice con relación a atari"
+      },
+      {
+         "name":"structureWebHook",
+         "type":"JSONB, NULL",
+         "description":"Estructura de la comunicación con el webhook de la empresa desde chazki hacia la empresa."
+      },
+      {
+         "name":"statusIDNotification",
+         "type":"arreglo de int, NULL",
+         "description":"Lista de estados de notificación de la empresa en su webhook que sean notificados.."
+      },
+      {
+         "name":"methodWebHook",
+         "type":"varchar, NULL",
+         "description":"Método a enviar cuando se utilice el webhook de la empresa."
+      },
+      {
+         "name":"contentTypeWebHook",
+         "type":"varchar, NULL",
+         "description":"Tipo de contenido cuando se utilice el webhook de la empresa"
+      }
+   ]
+}

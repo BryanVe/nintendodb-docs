@@ -1,0 +1,61 @@
+{
+   "title":"Incidence",
+   "description":"Contienen descripción de un incidente ocurrida.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(255)",
+         "description":"Nombre del incidente"
+      },
+      {
+         "name":"statusIDVinculated",
+         "type":"int, NULL",
+         "description":"Índice de una entidad que representa el estado de la orden con relación al incidente. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"description",
+         "type":"varchar(255)",
+         "description":"Descripción del incidente."
+      },
+      {
+         "name":"responsability",
+         "type":"varchar(255)",
+         "description":"El tipo de usuario que es responsable del incidente."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si está eliminado o no la orden."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del pedido."
+      },
+      {
+         "name":"cityID",
+         "type":"int, NULL",
+         "description":"Índice la ciudad en el que se aplica el incidente."
+      },
+      {
+         "name":"automaticReoffert",
+         "type":"boolean, NULL",
+         "description":"Determina si se puede reofertar la orden con este tipo de incidente."
+      },
+      {
+         "name":"paymentDiscount",
+         "type":"float, NULL",
+         "description":"La cantidad de descuento a aplicar por la motivos del incidente."
+      }
+   ]
+}

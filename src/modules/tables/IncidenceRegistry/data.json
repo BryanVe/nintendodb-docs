@@ -1,0 +1,41 @@
+{
+   "title":"IncidenceRegistry",
+   "description":"Son las incidencias ocurridas durante la ruta.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"affiliateID",
+         "type":"int",
+         "description":"Índice de la entidad que representa … Ver en la tabla Affiliates."
+      },
+      {
+         "name":"incidenceID",
+         "type":"int",
+         "description":"Índice de la entidad que representa un tipo de incidencia relacionada. Ver detalle en tabla Incidence."
+      },
+      {
+         "name":"routeID",
+         "type":"int",
+         "description":"Índice de la entidad que representa una ruta. Ver en la tabla routes."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro"
+      },
+      {
+         "name":"closed",
+         "type":"boolean",
+         "description":"Determinar si el registro  fue resuelto o no."
+      }
+   ]
+}

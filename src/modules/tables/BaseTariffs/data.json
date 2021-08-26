@@ -1,0 +1,71 @@
+{
+   "title":"BaseTariffs",
+   "description":"La tarifa monetaria base que se tiene en cada servicio del pedido dentro de una zona de una ciudad en un país.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"serviceID",
+         "type":"int",
+         "description":"Índice de la entidad que representa al servicio en cual se le aplica la tarifa. Ver a detalle en tabla Services."
+      },
+      {
+         "name":"zoneID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la zona en cual se le aplica la tarifa. Ver a detalle en tabla Zones."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad en cual se le aplica la tarifa. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"basePrice",
+         "type":"float",
+         "description":"valor del precio de la tarifa."
+      },
+      {
+         "name":"createdBy",
+         "type":"uuid",
+         "description":"Índice de la entidad que representa el usuario quien creó la tarifa. Ver a detalle en tabla Users."
+      },
+      {
+         "name":"lastEffectiveDate",
+         "type":"timestamptz, NULL",
+         "description":"Última fecha de efecto de la tarifa."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si está eliminado o no el registro."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"packageSize",
+         "type":"JSONB, NULL",
+         "description":"Información del tipo de paquete y precio en cual se aplica la tarifa. Si se aplica el una tarifa que se basa en cajas."
+      },
+      {
+         "name":"typeTariffID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo de tarifa que se utiliza. Ver a detalle en tabla GeneralType. Tipo de caja o servicio."
+      },
+      {
+         "name":"additionalPriceByKM",
+         "type":"float",
+         "description":"Precio adicional por Km. recorrido de más."
+      }
+   ]
+}

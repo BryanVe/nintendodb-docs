@@ -1,0 +1,121 @@
+{
+    "title":"Affiliates",
+    "description":"La asociación de un personal repartidor en el sistema.",
+    "attributes":[
+       {
+          "name":"userID",
+          "type":"uuid",
+          "description":"Índice de la entidad que representa la información basica del repartidor. Ver a detalle en tabla Users."
+       },
+       {
+          "name":"statusID",
+          "type":"int",
+          "description":"Índice de la entidad que representa el estado del afiliado. Ver detalle en tabla GenertalType."
+       },
+       {
+          "name":"loginDate",
+          "type":"timestamptz, NULL",
+          "description":"Fecha de registro en la aplicación. (*) posiblemente esté cambie."
+       },
+       {
+          "name":"lastConnection",
+          "type":"timestamptz, NULL",
+          "description":"Fecha de última activación en el aplicativo actualmente."
+       },
+       {
+          "name":"isLogged",
+          "type":"boolean",
+          "description":"Verifica si está logeado en la aplicación."
+       },
+       {
+          "name":"deviceToken",
+          "type":"varchar(255), NULL",
+          "description":"token del dispositivo."
+       },
+       {
+          "name":"isConnected",
+          "type":"boolean",
+          "description":"Verifica si está activado en el aplicativo actualmente."
+       },
+       {
+          "name":"paymentDate",
+          "type":"timestamptz, NULL",
+          "description":"Fecha de pago que recibió."
+       },
+       {
+          "name":"paymentNumberOperation",
+          "type":"varchar(255), NULL",
+          "description":"Número de operación de pago que recibió."
+       },
+       {
+          "name":"paymentVoucher",
+          "type":"varchar(255), NULL",
+          "description":"URL de la imagen del comprobante."
+       },
+       {
+          "name":"viewVideo",
+          "type":"boolean",
+          "description":"Determinar si vio los videos de entrenamiento del aplicativo."
+       },
+       {
+          "name":"stepID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa el número de pasos logrados en su registración. Ver a detalle en tabla Step."
+       },
+       {
+          "name":"preAffiliate",
+          "type":"boolean",
+          "description":"Verifica si estaba preafiliado el repartidor."
+       },
+       {
+          "name":"completeTest",
+          "type":"boolean",
+          "description":"Verifica si completo el test de conocimiento."
+       },
+       {
+          "name":"reject",
+          "type":"boolean",
+          "description":"Verifica si  está rechazado el repartidor."
+       },
+       {
+          "name":"rejectMotiveID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa el motivo de rechazo del repartidor. Ver detalle de tabla GeneralType."
+       },
+       {
+          "name":"agencyID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa a la agencia que está asociada el repartidor. Ver a detalle en tabla AffiliatesAgency."
+       },
+       {
+          "name":"deleted",
+          "type":"boolean",
+          "description":"Verifica si está eliminado el registro."
+       },
+       {
+          "name":"createdAt",
+          "type":"timestamptz",
+          "description":"Fecha de creación del registro."
+       },
+       {
+          "name":"updatedAt",
+          "type":"timestamptz",
+          "description":"Última fecha de actualización del registro."
+       },
+       {
+          "name":"currentRouteID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa la actual ruta que ejecuta. Ver a detalle en Routes."
+       },
+       {
+          "name":"currentVehicleID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa la actual vehículo asociado al repartidor. Ver a detalle en AffiliateVehicles."
+       },
+       {
+          "name":"currentOrderFifoID",
+          "type":"int, NULL",
+          "description":"Índice de la entidad que representa el pedido FIFO que actualmente tiene el repartidor. Ver a detalle en fifoOrders. Actualmente no se requiere esta tabla."
+       }
+    ]
+ }

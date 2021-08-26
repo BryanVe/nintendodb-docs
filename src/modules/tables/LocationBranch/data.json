@@ -1,0 +1,56 @@
+{
+   "title":"LocationBranch",
+   "description":"Ubicación dentro del almacén.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"name",
+         "type":"varchar(255)",
+         "description":"Nombre de la ubicación del sucursal."
+      },
+      {
+         "name":"warehouseID",
+         "type":"int",
+         "description":"Índice de la entidad que representa a almacen de la rama. Ver a detalle en tabla warehouses."
+      },
+      {
+         "name":"slot",
+         "type":"varchar(255)",
+         "description":"Información más detallada dentro del almacén. Para la busqueda junto a position y level."
+      },
+      {
+         "name":"position",
+         "type":"varchar(255)",
+         "description":"Información más detallada dentro del almacén. Para la busqueda junto a slot y level."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa los estados de la ubicación en el almacen. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Verificar si el registro está eliminado o no."
+      },
+      {
+         "name":"level",
+         "type":"varchar(255)",
+         "description":"Información más detallada dentro del almacén. Para la busqueda junto a slot y position."
+      }
+   ]
+}

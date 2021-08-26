@@ -1,0 +1,41 @@
+{
+   "title":"Roles",
+   "description":"El rol que se le asigna a un operador o usuario dentro de la empresa.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(50)",
+         "description":"Nombre del rol."
+      },
+      {
+         "name":"permissions",
+         "type":"JSONB",
+         "description":"Información con los permisos que se le asignan en el sistema."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa al estado del rol dentro del sistema. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      }
+   ]
+}

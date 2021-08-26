@@ -1,0 +1,71 @@
+{
+   "title":"FifoOrders",
+   "description":"Órdenes especiales que son solicitadas por la empresa cliente hacia chazki para realizar un ruta especial de tipo on-demand. Estas órdenes son para la integración con TOTTUS.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa a la empresa que tiene el paquete. Ver a detalle en tabla Enterprises."
+      },
+      {
+         "name":"branchID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa a la sucursal de la empresa que tiene el pedido. Ver a detalle en tabla Branches."
+      },
+      {
+         "name":"deliveryTrackCode",
+         "type":"varchar, NULL",
+         "description":"Código del pedido."
+      },
+      {
+         "name":"paymentProofID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el tipo documento del pago del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"deliveryCost",
+         "type":"numeric, NULL",
+         "description":"Costos del envío."
+      },
+      {
+         "name":"serviceID",
+         "type":"int, NULL",
+         "description":"Tipo de servicio del pedido."
+      },
+      {
+         "name":"time",
+         "type":"varchar, NULL",
+         "description":"Tiempo para la entrega del envío."
+      },
+      {
+         "name":"paymentMethodID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el método de pago. Ver a detalle en tabla GeneralTypes."
+      },
+      {
+         "name":"processed",
+         "type":"boolean, NULL",
+         "description":"Determinar si está procesado este pedido."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz, NULL",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz, NULL",
+         "description":"Última vez que fue actualizado el registro."
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa al repartidor que tomó este pedido. Ver a detalle en tabla Affiliates."
+      }
+   ]
+}

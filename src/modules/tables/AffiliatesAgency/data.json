@@ -1,0 +1,66 @@
+{
+    "title":"AffiliatesAgency",
+    "description":"Una agencia que los repartidores pueden estar asociados.",
+    "attributes":[
+       {
+          "name":"id",
+          "type":"serial",
+          "description":"Índice en la tabla"
+       },
+       {
+          "name":"name",
+          "type":"varchar",
+          "description":"Nombre de la agencia."
+       },
+       {
+          "name":"address",
+          "type":"varchar",
+          "description":"Dirección de la agencia."
+       },
+       {
+          "name":"phone",
+          "type":"varchar, NULL",
+          "description":"Número teléfonico de la empresa."
+       },
+       {
+          "name":"email",
+          "type":"varchar, NULL",
+          "description":"Correo de la empresa."
+       },
+       {
+          "name":"documentNumber",
+          "type":"varchar",
+          "description":"Número de identificación en el documento"
+       },
+       {
+          "name":"documentTypeID",
+          "type":"int",
+          "description":"Índice de la entidad que representa el tipo de documento utilizado para identificarse. Ver a detalle en GeneralType."
+       },
+       {
+          "name":"createdAt",
+          "type":"timestamptz",
+          "description":"Fecha de creación del registro."
+       },
+       {
+          "name":"updatedAt",
+          "type":"timestamptz",
+          "description":"Última fecha de actualización del registro."
+       },
+       {
+          "name":"cityID",
+          "type":"int",
+          "description":"Índice de la entidad que representa la ciudad en que reside. Ver a detalle en Cities."
+       },
+       {
+          "name":"countryID",
+          "type":"int",
+          "description":"Índice de la entidad que representa el país en que reside. Ver a detalle en Country."
+       },
+       {
+          "name":"deleted",
+          "type":"boolean",
+          "description":""
+       }
+    ]
+ }

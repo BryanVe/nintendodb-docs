@@ -1,0 +1,81 @@
+{
+   "title":"Cities",
+   "description":"Ciudades en donde se opera.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"countryID",
+         "type":"int",
+         "description":"Índice de la entidad que representa al país que pertenece. Ver a detalle en tabla Countries."
+      },
+      {
+         "name":"name",
+         "type":"varchar(255)",
+         "description":"Nombre de la ciudad"
+      },
+      {
+         "name":"meta",
+         "type":"JSONB, NULL",
+         "description":"Información adicional que se requiera de la ciudad."
+      },
+      {
+         "name":"timeZone",
+         "type":"varchar(255)",
+         "description":"Nombre de la zona horaria que aplica."
+      },
+      {
+         "name":"cityPoint",
+         "type":"Geometry(Point)",
+         "description":"Punto geoespacial que representa el centro de la ciudad."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptx",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptx",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado o no."
+      },
+      {
+         "name":"dispatchStartTime",
+         "type":"time, NULL",
+         "description":"Hora de inicio de despacho del horario de trabajo por parte del planeador.se aplica en la ciudad."
+      },
+      {
+         "name":"dispatchEndTime",
+         "type":"time, NULL",
+         "description":"Hora de fin de despacho del horario de trabajo por parte del planeador. aplica en la ciudad."
+      },
+      {
+         "name":"pickupStartTime",
+         "type":"time, NULL",
+         "description":"Hora de inicio de recojo del horario de trabajo por parte del planeador se aplica en la ciudad."
+      },
+      {
+         "name":"pickupEndTime",
+         "type":"time, NULL",
+         "description":"Hora de fin de recojo del horario de trabajo por parte del planeador. se aplica en la ciudad."
+      },
+      {
+         "name":"OSRMurl",
+         "type":"varchar, NULL",
+         "description":"URL de servicio OSRM."
+      },
+      {
+         "name":"formulaAfiiliateTariff",
+         "type":"JSONB, NULL",
+         "description":"Cuanto se le debe pagar a los repartidores de acuerdo al tipo de vehículo. Es una fórmula. (*) Posiblemente este cambie."
+      }
+   ]
+}

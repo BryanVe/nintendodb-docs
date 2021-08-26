@@ -1,0 +1,76 @@
+{
+   "title":"Vehicles",
+   "description":"Es un vehículo.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"categoryID",
+         "type":"int",
+         "description":"Índice de la entidad de una categoría de vehículo específico. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"brandID",
+         "type":"int",
+         "description":"Índice de la marca del vehículo. Ver a detalle en tabla VehicleBrands."
+      },
+      {
+         "name":"modelID",
+         "type":"int",
+         "description":"Índice del modelo del vehículo. Ver a detalle en tabla VehicleModels."
+      },
+      {
+         "name":"year",
+         "type":"int",
+         "description":"Año de vehículo."
+      },
+      {
+         "name":"dimX",
+         "type":"float8",
+         "description":"Ancho del vehículo."
+      },
+      {
+         "name":"dimY",
+         "type":"float8",
+         "description":"Largo del vehículo."
+      },
+      {
+         "name":"dimZ",
+         "type":"float8",
+         "description":"Altura del vehículo."
+      },
+      {
+         "name":"payload",
+         "type":"float8",
+         "description":"Capacidad de carga del vehículo."
+      },
+      {
+         "name":"name",
+         "type":"varchar(100)",
+         "description":"Nombre de identificación del vehículo."
+      },
+      {
+         "name":"extraFeatures",
+         "type":"JSON",
+         "description":"Características extra sobre  el vehículo en particular."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"determina si el registro está eliminado o no."
+      }
+   ]
+}

@@ -1,0 +1,81 @@
+{
+   "title":"Step",
+   "description":"Información con los pasos necesarios para completar la registración en el sistema.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"int",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"name",
+         "type":"varchar(255)",
+         "description":"Nombre del paso a tomar."
+      },
+      {
+         "name":"fields",
+         "type":"JSONB",
+         "description":"Información de los campos que se utilizara en este paso."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa a la ciudad en donde se aplica el paso. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"description",
+         "type":"text, NULL",
+         "description":"Descripción del paso a detalle."
+      },
+      {
+         "name":"isAutomatic",
+         "type":"boolean",
+         "description":"Verifica si es automático el paso."
+      },
+      {
+         "name":"processBD",
+         "type":"boolean",
+         "description":"(#)Tiene un enfoque visual para mostrar el botín de enviar en el sistema."
+      },
+      {
+         "name":"lastStep",
+         "type":"boolean",
+         "description":"Verifica si es el último paso."
+      },
+      {
+         "name":"showModal",
+         "type":"boolean",
+         "description":"(#) enfoque visual."
+      },
+      {
+         "name":"nextStepID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el siguiente paso a realizar. Ver a detalle en tabla Steps."
+      },
+      {
+         "name":"showIndicator",
+         "type":"boolean",
+         "description":"(#) enfoque visual para el registro"
+      },
+      {
+         "name":"emailField",
+         "type":"JSONB, NULL",
+         "description":"Información para un correo de notificación sobre el paso."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"extraFieldsDrawer",
+         "type":"JSONB, NULL",
+         "description":"Información para mostrar campos en del step a nivel visual."
+      }
+   ]
+}

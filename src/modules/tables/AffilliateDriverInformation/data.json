@@ -1,0 +1,56 @@
+{
+   "title":"AffilliateDriverInformation",
+   "description":"Información de la licencia de conducir de un repartidor.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice la tabla"
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid",
+         "description":"Índice de la entidad que representa al repartidor de quien es la licencia. Ver a detalle en tabla Affiliates."
+      },
+      {
+         "name":"driverLicenceNumber",
+         "type":"varchar(20), NULL",
+         "description":"Número de licencia de conducir."
+      },
+      {
+         "name":"driverLicenceCategoryID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la categoría de la  licencia. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"driverLicenceExpirationDate",
+         "type":"date, NULL",
+         "description":"Fecha de expiración de la licencia."
+      },
+      {
+         "name":"soatPhoto",
+         "type":"varchar(255), NULL",
+         "description":"URL de imagen de SOAT."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"driverLicencePhoto",
+         "type":"varchar(255), NULL",
+         "description":"URL de la imagen de la licencia."
+      },
+      {
+         "name":"circulationPermitPhoto",
+         "type":"varchar(255), NULL",
+         "description":"URL de la foto de circulación de la persona."
+      }
+   ]
+}

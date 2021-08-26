@@ -1,0 +1,41 @@
+{
+   "title":"PauseAffiliate",
+   "description":"Un repartidor realiza una pausa en sus actividades en caso se aplicara.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa a un repartidor afiliado. Ver a detalle en tabla Affiliates."
+      },
+      {
+         "name":"duration",
+         "type":"int",
+         "description":"Duración de la inhabilitación del afiliado."
+      },
+      {
+         "name":"rason",
+         "type":"varchar(255)",
+         "description":"La razón de la inhabilitación."
+      },
+      {
+         "name":"active",
+         "type":"boolean",
+         "description":"Determina si está activa la inhabilitación o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}

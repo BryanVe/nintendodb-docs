@@ -1,0 +1,36 @@
+{
+   "title":"VehicleModels",
+   "description":"Modelo de vehículo específico para una empresa de autos.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla."
+      },
+      {
+         "name":"brandID",
+         "type":"int",
+         "description":"Índice de la marca del modelo. Ver a detalle en tabla VehicleBrands."
+      },
+      {
+         "name":"name",
+         "type":"varchar(100)",
+         "description":"Nombre del modelo."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro"
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"determina si el registros está eliminado o no."
+      }
+   ]
+}

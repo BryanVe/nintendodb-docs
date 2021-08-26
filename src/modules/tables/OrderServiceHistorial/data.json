@@ -1,0 +1,51 @@
+{
+   "title":"OrderServiceHistorial",
+   "description":"Es un historial de un cambio de estado con opción a un incidencia de un pedido en la ruta asignada.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"orderServiceID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la relación de la ruta con la orden. Ver en la tabla de OrderService."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado de la orden. Ver en tabla de GeneralType."
+      },
+      {
+         "name":"incidenceID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la incidencia relacionada a la orden. Ver en la tabla de GeneralType."
+      },
+      {
+         "name":"userIDUdpate",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa al usuario que lo actualiza/crea el evento."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"motive",
+         "type":"varchar(255)",
+         "description":"Comentario del repartidor sobre este evento. Ver ahora en la tabla OrderServiceCommentary."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}

@@ -1,0 +1,56 @@
+{
+   "title":"DangerPlaces",
+   "description":"Contiene información de zonas peligrosas dentro de una ciudad.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"name",
+         "type":"varchar(400)",
+         "description":"Nombre del lugar."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del lugar. Ver a detalle de GeneralType."
+      },
+      {
+         "name":"polygon",
+         "type":"geometry(Polygon)",
+         "description":"Espacio geoespacial del lugar peligroso."
+      },
+      {
+         "name":"notes",
+         "type":"varchar(400), NULL",
+         "description":"Notas sobre el lugar."
+      },
+      {
+         "name":"createdBy",
+         "type":"varchar(100), NULL",
+         "description":"(#) Columna que no aporta información crucial"
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad que le pertenece. Ver a detalle de Cities."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"bool",
+         "description":"Verifica si el documento está eliminados o no."
+      }
+   ]
+}

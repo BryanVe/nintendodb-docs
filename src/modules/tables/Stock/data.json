@@ -1,0 +1,56 @@
+{
+   "title":"Stock",
+   "description":"El stock del pedido que entró en los almacenes del sistema.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"locationBranchID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa la ubicación del stock dentro del almacén. Ver a detalle en tabla LocationBranch."
+      },
+      {
+         "name":"orderID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el pedido dentro del stock. Ver a detalle en tabla Orders."
+      },
+      {
+         "name":"enterDate",
+         "type":"timestamptz",
+         "description":"Fecha de entrada del pedido dentro del stock."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del stock. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"quantity",
+         "type":"int",
+         "description":"Cantidad de objetos dentro del pedido."
+      },
+      {
+         "name":"dispatched",
+         "type":"boolean",
+         "description":"Determinar si la orden en el stock."
+      },
+      {
+         "name":"dispatchedDate",
+         "type":"NULL, timestamptz",
+         "description":"Fecha cuando se despacho el pedido desde stock."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}

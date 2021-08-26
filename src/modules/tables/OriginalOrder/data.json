@@ -1,0 +1,61 @@
+{
+   "title":"OriginalOrder",
+   "description":"Contiene la información original del pedido para pasar a revisión y estar listo a operar. Esta información proviene de un archivo CSV que es enviado por la empresa para generar los pedidos.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"csvHistorialID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el formulario donde se obtuvo la información. Ver a detalle en tabla CSVHistorial."
+      },
+      {
+         "name":"orderInfoData",
+         "type":"JSONB",
+         "description":"Información detallada de la orden desde el formulario."
+      },
+      {
+         "name":"orderInfo",
+         "type":"JSONB",
+         "description":"Información extra sobre la orden original."
+      },
+      {
+         "name":"validated",
+         "type":"boolean",
+         "description":"Determina si el pedido es válido o no."
+      },
+      {
+         "name":"blocked",
+         "type":"boolean",
+         "description":"Determina si el pedido está bloqueado o no."
+      },
+      {
+         "name":"errors",
+         "type":"JSONB, NULL",
+         "description":"Información sobre algún error en el pedido para su validación."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado o no."
+      },
+      {
+         "name":"cityID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la ciudad donde se está asociada el pedido. Ver a detalle en tabla Cities."
+      }
+   ]
+}

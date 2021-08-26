@@ -52,6 +52,7 @@ const NavigationListItem: FC<IProps> = props => {
         disableGutters
       >
         <Button
+          disableRipple
           className={classes.button}
           onClick={handleToggle}
           style={style}
@@ -80,6 +81,7 @@ const NavigationListItem: FC<IProps> = props => {
         disableGutters
       >
         <Button
+          disableRipple
           component={RouterLink}
           to={href ? href : ''}
           href={href ? href : ''}

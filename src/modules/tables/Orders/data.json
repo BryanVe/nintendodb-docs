@@ -1,0 +1,321 @@
+{
+   "title":"Orders",
+   "description":"Información del pedido listo para ser enviado en el sistema.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"originalOrderID",
+         "type":"int",
+         "description":""
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la empresa que envía el pedido. Ver a detalle en la tabla Enterprises."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"trackCode",
+         "type":"varchar(255)",
+         "description":"Código de pedido."
+      },
+      {
+         "name":"paymentMethodID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo de método de pago del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"paymentProofID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo documento del pago del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"serviceID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo de servicio del pedido. Ver a detalle en la tabla Services."
+      },
+      {
+         "name":"packageEnvelope",
+         "type":"text",
+         "description":"Medio de envío del paquete."
+      },
+      {
+         "name":"packageWeight",
+         "type":"float",
+         "description":"Peso del paquete."
+      },
+      {
+         "name":"packageSizeID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo de tamaño del pedido. Ver a detalle en la tabla PackageSize."
+      },
+      {
+         "name":"packageQuantity",
+         "type":"int",
+         "description":"Cantidad de paquetes."
+      },
+      {
+         "name":"productDescription",
+         "type":"text",
+         "description":"Descripción del pedido."
+      },
+      {
+         "name":"productPrice",
+         "type":"float",
+         "description":"Precio del paquete del pedido. Solo informativo."
+      },
+      {
+         "name":"reverseLogistic",
+         "type":"boolean, NULL",
+         "description":"Determinar si tiene logistica inversa o no."
+      },
+      {
+         "name":"crossdocking",
+         "type":"boolean",
+         "description":"Determinar si tiene proceso crossdocking o no."
+      },
+      {
+         "name":"pickUpBranchID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la sucursal donde se debe recoger el pedido. Ver a detalle en la tabla Branches."
+      },
+      {
+         "name":"pickUpAddres",
+         "type":"text, NULL",
+         "description":"Dirección de recojo el pedido."
+      },
+      {
+         "name":"pickUpPoint",
+         "type":"geometry(point), NULL",
+         "description":"Ubicación geoespacial del recojo del pedido."
+      },
+      {
+         "name":"pickUpPostalCode",
+         "type":"text, NULL",
+         "description":"Código postal del recojo del pedido."
+      },
+      {
+         "name":"pickUpAddressReference",
+         "type":"text, NULL",
+         "description":"Dirección de referencia en el recojo del pedido"
+      },
+      {
+         "name":"pickUpPrimaryReference",
+         "type":"text, NULL",
+         "description":"Referencia primaria en el recojo del pedido."
+      },
+      {
+         "name":"pickUpSecondaryReference",
+         "type":"text, NULL",
+         "description":"Referencia secundaria en el recojo del pedido."
+      },
+      {
+         "name":"pickUpNotes",
+         "type":"text, NULL",
+         "description":"Notas sobre el recojo del pedido."
+      },
+      {
+         "name":"pickUpContactName",
+         "type":"text, NULL",
+         "description":"Nombre de contacto de la persona en el recojo del pedido."
+      },
+      {
+         "name":"pickUpContactPhone",
+         "type":"text, NULL",
+         "description":"Número telefónico del contacto de la persona en el recojo del pedido."
+      },
+      {
+         "name":"pickUpContactDocumentTypeID",
+         "type":"text, NULL",
+         "description":"Índice de la entidad que representa el tipo documento del contacto del recojo del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"pickUpContactDocumentNumber",
+         "type":"text, NULL",
+         "description":"Número del documento del contacto de la persona en el recojo del pedido."
+      },
+      {
+         "name":"pickUpContactEmail",
+         "type":"text, NULL",
+         "description":"Correo del contacto de la persona en el recojo del pedido."
+      },
+      {
+         "name":"dropBranchID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la sucursal donde se debe entregar el pedido. Ver a detalle en la tabla Branches."
+      },
+      {
+         "name":"dropAddress",
+         "type":"text, NULL",
+         "description":"Dirección de la entrega del pedido."
+      },
+      {
+         "name":"dropPoint",
+         "type":"geometry(Point), NULL",
+         "description":"Ubicación geoespacial del entrega del  pedido"
+      },
+      {
+         "name":"dropPostalCode",
+         "type":"text, NULL",
+         "description":"Código postal de la entrega del pedido."
+      },
+      {
+         "name":"dropAddressReference",
+         "type":"text, NULL",
+         "description":"Dirección de referencia en la entrega del pedido"
+      },
+      {
+         "name":"dropPrimaryReference",
+         "type":"text, NULL",
+         "description":"Referencia primaria en la entrega del pedido."
+      },
+      {
+         "name":"dropSecondaryReference",
+         "type":"text, NULL",
+         "description":"Referencia secundaria en la entrega del pedido."
+      },
+      {
+         "name":"dropNotes",
+         "type":"text, NULL",
+         "description":"Notas sobre la entrega del pedido."
+      },
+      {
+         "name":"dropContactNames",
+         "type":"text, NULL",
+         "description":"Nombre de contacto de la persona en la entrega del pedido."
+      },
+      {
+         "name":"dropContactPhone",
+         "type":"text, NULL",
+         "description":"Número telefónico del contacto de la persona en la entrega del pedido."
+      },
+      {
+         "name":"dropContactDocumentTypeID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el tipo documento del contacto de la entrega del pedido. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"dropContactDocumentNumber",
+         "type":"text, NULL",
+         "description":"Número del documento del contacto de la persona en la entrega del pedido."
+      },
+      {
+         "name":"dropContactEmail",
+         "type":"text, NULL",
+         "description":"Correo del contacto de la persona en la entrega del pedido."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad donde reside el pedido. Ver a detalle en la tabla Cities."
+      },
+      {
+         "name":"polygonID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el sector de cobertura del pedido. Ver a detalle en la tabla Sectors."
+      },
+      {
+         "name":"distance",
+         "type":"float, NULL",
+         "description":"Distancia entre la dirección de entrega y de recojo en calles."
+      },
+      {
+         "name":"isPickedUp",
+         "type":"boolean, NULL",
+         "description":"Determinar si el pedido tiene que ser recogido o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado o no."
+      },
+      {
+         "name":"lastIncidenceID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el último incidente del pedido. Ver a detalle en la tabla Incidence."
+      },
+      {
+         "name":"warehouseID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el almacén donde esta el pedido. Ver a detalle en la tabla Warehouses."
+      },
+      {
+         "name":"urlQRCode",
+         "type":"varchar, NULL",
+         "description":"Código QR para actualizar las ordnes FIFO."
+      },
+      {
+         "name":"haveReofferRequest",
+         "type":"boolean, NULL",
+         "description":"Determinar si el pedido tiene una solicitud de reoferta."
+      },
+      {
+         "name":"dateRequest",
+         "type":"timestamptz, NULL",
+         "description":"Fecha de la solicitud de la reoferta."
+      },
+      {
+         "name":"receptorAcuse",
+         "type":"varchar, NULL",
+         "description":"Quien es el receptor del pedido."
+      },
+      {
+         "name":"relationshipAcuse",
+         "type":"varchar, NULL",
+         "description":"Cuál es la relación con el que recibió con el cliente del pedido."
+      },
+      {
+         "name":"baseTariffID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la tarifa básica que se le aplica al pedido. Ver a detalle en la tabla BaseTariffs."
+      },
+      {
+         "name":"clientTariffID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la tarifa del cliente que se le aplica al pedido. Ver a detalle en la tabla ClientTariffs."
+      },
+      {
+         "name":"paidOder",
+         "type":"boolean",
+         "description":"Determina si el pedido esta pagado o no."
+      },
+      {
+         "name":"totalPrice",
+         "type":"float",
+         "description":"Precio total que genera el pedido."
+      },
+      {
+         "name":"urlFileAcuse",
+         "type":"varchar, NULL",
+         "description":"URL de la imagen del receptor del pedido."
+      },
+      {
+         "name":"returnOrder",
+         "type":"boolean",
+         "description":"Determina si la orden necesita ser retornada o no a chazki para una devolución."
+      },
+      {
+         "name":"classificationOrderID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la clasificación del pedido. Ver a detalle en la tabla GeneralTypes."
+      }
+   ]
+}

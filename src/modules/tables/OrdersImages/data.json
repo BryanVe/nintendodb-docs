@@ -1,0 +1,51 @@
+{
+   "title":"OrdersImages",
+   "description":"Información de una imagen tomada en una operación de una orden dentro de una ruta. Cuando se realiza una actividad de un orden dentro de una ruta asignada; pueden tomarse fotos para atestiguar sobre un hecho de esta actividad realizada.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla"
+      },
+      {
+         "name":"orderID",
+         "type":"int",
+         "description":"Índice de la entidad de una orden específica. Ver a detalle en tabla Orders."
+      },
+      {
+         "name":"orderServiceID",
+         "type":"int",
+         "description":"Índice de la entidad de uso de una orden dentro de una ruta. Ver a detalle en tabla OrderService."
+      },
+      {
+         "name":"groupID",
+         "type":"int",
+         "description":"Índice de la entidad de una categoría de imágenes sobre el tipo de operación realizada sobre la orden. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"filename",
+         "type":"varchar(255)",
+         "description":"Nombre del archivo de la imagen."
+      },
+      {
+         "name":"url",
+         "type":"varchar(255)",
+         "description":"URL del archivo de la imagen."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      }
+   ]
+}

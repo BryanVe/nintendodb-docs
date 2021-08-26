@@ -1,0 +1,56 @@
+{
+   "title":"CSVHistorial",
+   "description":"Solicitud de creación de Pedidos usando un formulario CSV con la información en bruto de los pedidos.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"filename",
+         "type":"varchar(255)",
+         "description":"Nombre del archivo CSV."
+      },
+      {
+         "name":"url",
+         "type":"varchar(255), NULL",
+         "description":"URL del archivo donde está el archivo."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int",
+         "description":"Índice la entidad que representa la empresa que envió el archivo. Ver a detalle en la tabla Enterprises."
+      },
+      {
+         "name":"operatorID",
+         "type":"uuid",
+         "description":"Índice la entidad que representa el usuario que envío. Ver a detalle en la tabla Users."
+      },
+      {
+         "name":"orderNumber",
+         "type":"int",
+         "description":"Número de pedidos solicitados."
+      },
+      {
+         "name":"meta",
+         "type":"JSONB, NULL",
+         "description":"Información extra de la solicitud."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"bool",
+         "description":"Determinar si el registro está eliminado o no."
+      }
+   ]
+}

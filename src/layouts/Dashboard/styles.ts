@@ -1,16 +1,16 @@
 import { makeStyles } from '@material-ui/core';
 
+const navBarWidth = 270
+
 const useStyles = makeStyles((theme) => ({
     root: {
-      height: '100%',
-      width: '100%',
       display: 'flex',
       overflow: 'hidden'
     },
     topBar: {
       backgroundColor: theme.palette.white.main,
       zIndex: 2,
-      width: 'calc(100vw - 256px)',
+      width: `calc(100vw - ${navBarWidth}px)`,
       [theme.breakpoints.down('md')]: {
         width: '100vw'
       }
@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     container: {
       display: 'flex',
       flex: '1 1 auto',
-      marginLeft: 256,
-      width: 'calc(100vw - 256px)',
+      marginLeft: navBarWidth,
+      width: `calc(100vw - ${navBarWidth}px)`,
       paddingTop: 64,
       [theme.breakpoints.down('md')]: {
         width: '100vw',
@@ -28,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
     },
     navBar: {
       zIndex: 3,
-      width: 256,
-      minWidth: 256,
+      width: navBarWidth,
+      maxWidth: navBarWidth,
+      minWidth: navBarWidth,
       flex: '0 0 auto',
       position: 'fixed',
       backgroundColor: theme.palette.primary.main,

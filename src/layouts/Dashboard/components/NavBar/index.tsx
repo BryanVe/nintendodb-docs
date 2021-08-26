@@ -25,26 +25,28 @@ const NavBar: FC<IProps> = (props) => {
   const classes = useStyles();
 
   const navbarContent = (
-    <div className={classes.content}>
-      <div className={classes.logoWrapper}>
-        <img
-          alt='Chazki'
-          src={whiteChazkiLogo}
-          className={classes.logo}
-        />
-      </div>
-      <Divider className={classes.divider} />
-      <nav className={classes.navigation}>
-        {navigationConfig.map((list) => (
-          <Navigation
-            component='div'
-            key={list.title}
-            pages={list.pages}
-            title={list.title}
+    <>
+      <div className={classes.content}>
+        <div className={classes.logoWrapper}>
+          <img
+            alt='Chazki'
+            src={whiteChazkiLogo}
+            className={classes.logo}
           />
-        ))}
-      </nav>
-    </div>
+        </div>
+        <Divider className={classes.divider} />
+        <nav className={classes.navigation}>
+          {navigationConfig.map((list) => (
+            <Navigation
+              component='div'
+              key={list.title}
+              pages={list.pages}
+              title={list.title}
+            />
+          ))}
+        </nav>
+      </div>
+    </>
   );
 
   return (

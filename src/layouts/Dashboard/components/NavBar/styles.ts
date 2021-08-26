@@ -2,11 +2,23 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      height: '100%',
-      overflowY: 'auto'
+      height: '100vh',
+      maxWidth: 270,
+      overflowY: 'auto',
+      '&::-webkit-scrollbar': {
+        width: 7,
+        backgroundColor: theme.palette.primary.dark
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: theme.palette.secondary.light,
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        backgroundColor: theme.palette.secondary.dark
+      }
     },
     content: {
-      padding: theme.spacing(2)
+      padding: theme.spacing(2),
+      flexGrow: 1
     },
     divider: {
       marginTop: theme.spacing(2),
@@ -17,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
     logoWrapper: {
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
     logo: {
       width: 150,

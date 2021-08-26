@@ -1,0 +1,61 @@
+{
+   "title":"Countries",
+   "description":"Contiene información del país en que se opera.",
+   "attributes":[
+      {
+         "name":"name",
+         "type":"varchar(255)",
+         "description":"Nombre del país"
+      },
+      {
+         "name":"region",
+         "type":"varchar(50)",
+         "description":"Acrónimo del país"
+      },
+      {
+         "name":"meta",
+         "type":"JSONB, NULL",
+         "description":"Información extra sobre el país"
+      },
+      {
+         "name":"prefixPhone",
+         "type":"varchar(255), NULL",
+         "description":"Prefijo de teléfono del país"
+      },
+      {
+         "name":"urlFlag",
+         "type":"varchar(255), NULL",
+         "description":"URL de la imagen de la bandera del país."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Verifica si el registro está eliminado o no."
+      },
+      {
+         "name":"landing",
+         "type":"JSONB, NULL",
+         "description":"Información especial del país sobre documentos entre otras cosas más para la página web. Busca ser informativo."
+      },
+      {
+         "name":"currencyISO",
+         "type":"varchar",
+         "description":"Acrónimo de la moneda que se utiliza."
+      },
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      }
+   ]
+}

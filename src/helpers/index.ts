@@ -1,7 +1,7 @@
-import * as object from './object'
+import * as routes from './routes'
 
 const helpers = {
-    object
+    routes
 }
 
 export default helpers

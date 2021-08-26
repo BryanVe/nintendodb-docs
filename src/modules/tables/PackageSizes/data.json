@@ -1,0 +1,56 @@
+{
+   "title":"PackageSizes",
+   "description":"Tipo de caja que está utilizandose en los pedidos.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"name",
+         "type":"varchar()",
+         "description":"Nombre de la caja"
+      },
+      {
+         "name":"dimX",
+         "type":"float",
+         "description":"Largo de la caja."
+      },
+      {
+         "name":"dimY",
+         "type":"float",
+         "description":"Ancho de la caja."
+      },
+      {
+         "name":"dimZ",
+         "type":"float",
+         "description":"Alto de la caja."
+      },
+      {
+         "name":"maxWeight",
+         "type":"float",
+         "description":"Capacidad máxima de peso que soporta la caja."
+      },
+      {
+         "name":"countryID",
+         "type":"int",
+         "description":"Índice de la entidad que representa del país que utiliza esta caja. Para mas detalle ver la tabla Country."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}

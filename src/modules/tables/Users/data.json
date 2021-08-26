@@ -1,0 +1,196 @@
+{
+   "title":"Users",
+   "description":"Información de un usuario dentro del sistema.Esta es la base para los usuarios que son clientes como los repartidores. En la tabla Affiliates contiene más detalle de los repartidores.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"UUID",
+         "description":"Identificación del usuario."
+      },
+      {
+         "name":"names",
+         "type":"NULL, varchar(50)",
+         "description":"nombre completo del usuario."
+      },
+      {
+         "name":"lastnames",
+         "type":"NULL, varchar(100)",
+         "description":"apellidos completos del usuario."
+      },
+      {
+         "name":"email",
+         "type":"varchar(255)",
+         "description":"correo del usuario"
+      },
+      {
+         "name":"password",
+         "type":"NULL, varchar(70)",
+         "description":"contraseña del usuario."
+      },
+      {
+         "name":"phone",
+         "type":"NULL, varchar(30)",
+         "description":"numero de teléfono del usuario"
+      },
+      {
+         "name":"cityID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa a la ciudad en que reside el usuario. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"countryID",
+         "type":"NULL, Int",
+         "description":"Índice de la entidad que representa el país en el que reside el usuario. Ver a detalle en tabla Countries."
+      },
+      {
+         "name":"statusID",
+         "type":"NULL, Int",
+         "description":"Índice de la entidad que representa el estado del usuario. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"roleID",
+         "type":"NULL, Int",
+         "description":"Índice de la entidad que representa el tipo de rol que actualmente tiene. Ver a detalle en tabla Roles."
+      },
+      {
+         "name":"documentTypeID",
+         "type":"NULL, Int",
+         "description":"Índice de la entidad que representa el tipo documento que utiliza para identificarse. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"NULL, Int",
+         "description":"Índice de la entidad que representa la empresa que está asociado. Ver a detalle en tabla Enterprises."
+      },
+      {
+         "name":"documentNumber",
+         "type":"NULL, varchar(255)",
+         "description":"Valor del documento que utiliza para identificarse."
+      },
+      {
+         "name":"personalRUC",
+         "type":"NULL, varchar(255)",
+         "description":"Número de RUC que tiene el usuario."
+      },
+      {
+         "name":"birthdate",
+         "type":"NULL, date",
+         "description":"Fecha de nacimiento del usuario."
+      },
+      {
+         "name":"studyLevelID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa el nivel de estudio del usuario. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"hasCovid",
+         "type":"NULL, boolean",
+         "description":"Verificar si el usuario tiene covid."
+      },
+      {
+         "name":"bankID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa el banco que el usuario utiliza. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"accountNumber",
+         "type":"NULL, varchar(255)",
+         "description":"Número de cuenta bancaria del usuario."
+      },
+      {
+         "name":"documentFrontPhoto",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen del DNI del usuario."
+      },
+      {
+         "name":"documentBackPhoto",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen del DNI del usuario."
+      },
+      {
+         "name":"passportPhoto",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen del pasaporte del usuario."
+      },
+      {
+         "name":"picture",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen de perfil del usuario."
+      },
+      {
+         "name":"emailVerified",
+         "type":"NULL, boolean",
+         "description":"determina si el correo es verificado."
+      },
+      {
+         "name":"clientIDs",
+         "type":"NULL, text",
+         "description":"Son autorizaciones para acceder a modulo en nintendo."
+      },
+      {
+         "name":"polygonID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa el sector que el usuario. Ver a detalle en tabla Sectors."
+      },
+      {
+         "name":"principalEnterpriseUser",
+         "type":"NULL, boolean",
+         "description":"Determina si el usuario es el principal representante de la empresa."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registros"
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determina si el registro está eliminado o no."
+      },
+      {
+         "name":"documentBirthCertificate",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen del documento de certificación de nacimiento."
+      },
+      {
+         "name":"documentProofAddress",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen de documento de prueba de dirección."
+      },
+      {
+         "name":"docummentProofStudies",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen de documento prueba de nivel de estudios."
+      },
+      {
+         "name":"documentRFS",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen del documento de certificación de nacimiento."
+      },
+      {
+         "name":"documentCV",
+         "type":"NULL, varchar(255)",
+         "description":"URL de la imagen de documento CV."
+      },
+      {
+         "name":"documentEmploymentLetters",
+         "type":"NULL, varchar(255)",
+         "description":"(*) Documentación de empleabilidad. Uso en México."
+      },
+      {
+         "name":"documentRecordEvaluation",
+         "type":"NULL, varchar(255)",
+         "description":"(*) Documento de registro policial. Uso en méxico."
+      },
+      {
+         "name":"documentPsychometricEvaluation",
+         "type":"NULL, varchar(255)",
+         "description":"(*) Documento de registro psicométrico. Uso en méxico."
+      }
+   ]
+}

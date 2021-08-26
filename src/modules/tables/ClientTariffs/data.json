@@ -1,0 +1,56 @@
+{
+   "title":"ClientTariffs",
+   "description":"Un tipo de tarifa especial para los clientes a partir de las tarifas bases.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"baseTariffID",
+         "type":"int",
+         "description":"Índice de la entidad que representa a la tarifa base de la que se deriva. Ver a detalle en tabla BaseTariffs."
+      },
+      {
+         "name":"createdBy",
+         "type":"uuid",
+         "description":"Usuario que creó esta tarifa de cliente."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la empresa que se le puede aplicar de forma especial. Ver a detalle en tabla BaseTariffs."
+      },
+      {
+         "name":"discount",
+         "type":"float",
+         "description":"Cantidad que se debe descontar."
+      },
+      {
+         "name":"lastEffectiveDate",
+         "type":"timestamptz, NULL",
+         "description":"Fecha que se aplica esta tarifa."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Verifica si el registro está eliminado o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"discountInAdditionalPriceByKM",
+         "type":"boolean",
+         "description":"Verifica si hay descuento adicional por KM de la tarifa base se aplica en esta tarifa."
+      }
+   ]
+}

@@ -1,0 +1,46 @@
+{
+   "title":"OrderServiceCommentary",
+   "description":"Comentario de la orden realizada en la ruta. Es una mejora al campo “motive” en la tabla OrderServicHistorial.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"orderID",
+         "type":"int",
+         "description":"Índice la entidad que representa la orden a comentar. Ver a detalle en la tabla Orders."
+      },
+      {
+         "name":"orderServiceID",
+         "type":"int",
+         "description":"Índice la entidad que representa la relación entre ruta y orden. Ver a detalle en tabla orderService."
+      },
+      {
+         "name":"comentary",
+         "type":"varchar(255)",
+         "description":"Comentario realizado  la entidad OrderService"
+      },
+      {
+         "name":"userID",
+         "type":"UUID",
+         "description":"Índice de un usuario que realiza el comentario. Ver a detalle en tabla Users."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"typeUserID",
+         "type":"NULL, int",
+         "description":"Índice de la entidad que representa el tipo de usuario que realizo el comentario. Ver a detalle en tabla GeneralType."
+      }
+   ]
+}

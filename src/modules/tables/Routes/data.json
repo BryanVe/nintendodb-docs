@@ -1,0 +1,161 @@
+{
+   "title":"Routes",
+   "description":"Recorrido de entrega de pedidos que un repartidor escoge realizar.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"routeCode",
+         "type":"varchar(255), NULL",
+         "description":"Código de ruta."
+      },
+      {
+         "name":"vehicleTypeID",
+         "type":"int",
+         "description":"Índice de la entidad que representa al tipo de vehículo usado en la ruta. Ver a detalle tabla GeneralType."
+      },
+      {
+         "name":"affiliateVehicleID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa al vehículo del repartidor utilizado para la operación. Ver a detalle en tabla AffiliateVehicles."
+      },
+      {
+         "name":"affliateID",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa el repartidor de la ruta. Ver a detalle en tabla Affiliates."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado de la ruta. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"deliveries",
+         "type":"int, NULL",
+         "description":"Número de pedidos que deben ser enviados."
+      },
+      {
+         "name":"pickUps",
+         "type":"int, NULL",
+         "description":"Número de pedidos a recoger."
+      },
+      {
+         "name":"price",
+         "type":"float, NULL",
+         "description":"El precio que se debe pagar al repartidor por la ruta cuando termina"
+      },
+      {
+         "name":"details",
+         "type":"varchar(255)",
+         "description":"Detalle de la ruta."
+      },
+      {
+         "name":"estimatedTotalDistance",
+         "type":"int",
+         "description":"Distancia total estimada en la ruta."
+      },
+      {
+         "name":"realTotalDistance",
+         "type":"int, NULL",
+         "description":"Distancia total real en la ruta."
+      },
+      {
+         "name":"estimatedStartTime",
+         "type":"timestamptz, NULL",
+         "description":"Fecha estimada de inicio de la ruta."
+      },
+      {
+         "name":"realStartTime",
+         "type":"timestamptz, NULL",
+         "description":"Fecha real de inicio de la ruta."
+      },
+      {
+         "name":"estimatedDuration",
+         "type":"int",
+         "description":"Duración estimada en minutos de la ruta."
+      },
+      {
+         "name":"realDuration",
+         "type":"int, NULL",
+         "description":"Duración real en minutos de la ruta."
+      },
+      {
+         "name":"sectorsID",
+         "type":"arreglo de int",
+         "description":"Lista de sectores que cubre la ruta. Ver a detalle en tabla Sectors,"
+      },
+      {
+         "name":"activities",
+         "type":"arreglo de int",
+         "description":"Lista de actividades que se deben realizar en el ruta. Ver a detalle en tabla Activities."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Determinar si el registro está eliminado o no."
+      },
+      {
+         "name":"startPolygonID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa el sector en el que se empieza la ruta. Ver a detalle en tabla Sectors."
+      },
+      {
+         "name":"endPolygonID",
+         "type":"int , NULL",
+         "description":"Índice de la entidad que representa el sector en el que se finaliza la ruta. Ver a detalle en tabla Sectors."
+      },
+      {
+         "name":"dispatchesOrders",
+         "type":"boolean",
+         "description":"Determinar si los pedidos son despachados desde el almacén de chazki después de recogerlos por el repartidor.."
+      },
+      {
+         "name":"pickedPackages",
+         "type":"boolean",
+         "description":"Determinar si los pedidos son recogidos por el repartidor en el almacén en chazki."
+      },
+      {
+         "name":"liquidationStateID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado de la liquidación de la ruta. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"liquidationDate",
+         "type":"timestamptz, NULL",
+         "description":"Fecha de la liquidación de la ruta."
+      },
+      {
+         "name":"userResponsable",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa un operador que le asigno la ruta al repatidor. Ver a detalle en tabla Users."
+      },
+      {
+         "name":"validated",
+         "type":"boolean",
+         "description":"Determina que la ruta es válida o no por el operador. (#) no útil ahora."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa una ciudad que contiene la ruta. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"isFromFifo",
+         "type":"boolean, NULL",
+         "description":"Determina si la ruta proviene de un ordenes tipo fifo. Ver a detalle en tabla FifoOrders."
+      }
+   ]
+}

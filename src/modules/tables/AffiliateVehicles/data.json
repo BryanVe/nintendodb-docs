@@ -1,0 +1,41 @@
+{
+   "title":"AffiliateVehicles",
+   "description":"Contiene información del vehículo asociado a una afiliación.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla"
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa a la repartidor que está asociada al vehículo. Ver a detalle en tabla Affiliates."
+      },
+      {
+         "name":"categoryVehicleID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el tipo de vehículo que es. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"vehiclePlate",
+         "type":"varchar",
+         "description":"Número de la placa del vehículo."
+      },
+      {
+         "name":"deleted",
+         "type":"bool",
+         "description":"Verifica si el registro está eliminado o no."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de la creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Último fecha de actualización del registro."
+      }
+   ]
+}

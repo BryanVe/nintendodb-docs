@@ -1,0 +1,61 @@
+{
+   "title":"Sectors",
+   "description":"Es una área geográfica dentro de una ciudad, con el fin de determinar la cobertura entrega de pedidos dentro del sistema,",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(40)",
+         "description":"Nombre del sector"
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad en que reside el sector. Ver a detalle en tabla Cities."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado del sector. Ver a detalle en tabla GeneralType."
+      },
+      {
+         "name":"locationID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa un usuario que creó la ruta. Ver a detalle en tabla Users."
+      },
+      {
+         "name":"createdBy",
+         "type":"varchar(100), NULL",
+         "description":"Usuario que creó el sector. (#) no útil."
+      },
+      {
+         "name":"polygon",
+         "type":"geometry(polygon), NULL",
+         "description":"Espacio geoespacial que cubre el sector."
+      },
+      {
+         "name":"startPoint",
+         "type":"geometry(point), NULL",
+         "description":"Punto geoespacial que inicia el sector."
+      },
+      {
+         "name":"createdAt",
+         "type":"timtestamptz",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timtestamptz",
+         "description":"Última fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"bool",
+         "description":"Determina si el registro está eliminado o no."
+      }
+   ]
+}

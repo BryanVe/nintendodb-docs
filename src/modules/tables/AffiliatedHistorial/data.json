@@ -1,0 +1,46 @@
+{
+   "title":"AffiliatedHistorial",
+   "description":"Información histórica de un repartidor en el sistema.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"índice de la tabla"
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid",
+         "description":"Índice de la entidad que representa a un repartidor. Ver más a detalle en tabla Affiliates."
+      },
+      {
+         "name":"operatorID",
+         "type":"uuid",
+         "description":"Índice de la entidad que representa a un usuario que realizó la operación sobre el repartidor. Ver más a detalle en tabla Users."
+      },
+      {
+         "name":"motive",
+         "type":"varchar(255)",
+         "description":"Razón por la que se realizó la operación."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de la creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Último fecha de actualización del registro."
+      },
+      {
+         "name":"deleted",
+         "type":"boolean",
+         "description":"Verifica si está eliminado o no el registro."
+      },
+      {
+         "name":"affiliateStatusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa a un estado del repartidor. Ver más a detalle en tabla GeneralType."
+      }
+   ]
+}

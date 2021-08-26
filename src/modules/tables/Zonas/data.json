@@ -1,0 +1,51 @@
+{
+   "title":"Zonas",
+   "description":"zona geográfica de una ciudad. Se utiliza para dar tarifas que se le cobran al cliente según la zona.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice de la tabla."
+      },
+      {
+         "name":"name",
+         "type":"varchar(40)",
+         "description":"Nombre de la zona."
+      },
+      {
+         "name":"zone",
+         "type":"geometry(Polygon)",
+         "description":"Polígono geoespacial que define los límites de la zona."
+      },
+      {
+         "name":"statusID",
+         "type":"int",
+         "description":"Índice de la entidad que representa el estado de la zona. Ver a detalle en la tabla GeneralType."
+      },
+      {
+         "name":"cityID",
+         "type":"int",
+         "description":"Índice de la entidad que representa la ciudad donde esta la zona. Ver a detalle en la tabla Cities."
+      },
+      {
+         "name":"createdBy",
+         "type":"varchar(100), NULL",
+         "description":"Nombre de la persona que creó esta zona.(#) No es útil."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz",
+         "description":"Fecha de creación del registro"
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz",
+         "description":"Última fecha de actualización de registro."
+      },
+      {
+         "name":"deleted",
+         "type":"Boolean",
+         "description":"Determina si un registro está eliminado o no."
+      }
+   ]
+}

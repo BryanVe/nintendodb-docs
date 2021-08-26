@@ -1,0 +1,81 @@
+{
+   "title":"AsignedStaffing",
+   "description":"Representa al registro del personal de la sucursal que tiene una empresa.",
+   "attributes":[
+      {
+         "name":"id",
+         "type":"serial",
+         "description":"Índice en la tabla"
+      },
+      {
+         "name":"staffDate",
+         "type":"date, NULL",
+         "description":"Fecha de ingreso del personal."
+      },
+      {
+         "name":"enterpriseID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la empresa que contrata al personal. Ver a detalle en tabla Enterprises."
+      },
+      {
+         "name":"branchOfficeID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la sucursal en que trabaja el personal. Ver a detalle en tabla Branches."
+      },
+      {
+         "name":"affiliateID",
+         "type":"uuid, NULL",
+         "description":"Índice de la entidad que representa información de personal como repartidor. Ver a detalle en tabla Affliates."
+      },
+      {
+         "name":"startHours",
+         "type":"varchar, NULL",
+         "description":"Hora de inicio de trabajo del personal."
+      },
+      {
+         "name":"endHours",
+         "type":"varchar, NULL",
+         "description":"Hora de finalización de trabajo del personal"
+      },
+      {
+         "name":"totalHours",
+         "type":"int, NULL",
+         "description":"Diferencia de horas entre starHours y endHours."
+      },
+      {
+         "name":"workingHours",
+         "type":"int, NULL",
+         "description":"Número de horas para trabajar definidas en contrato. (*) Posiblemente cambie."
+      },
+      {
+         "name":"baseTariff",
+         "type":"float, NULL",
+         "description":"Cantidad de la tarifa base para pagarle al personal por horas.(*) Posiblemente cambie."
+      },
+      {
+         "name":"assist",
+         "type":"bool, NULL",
+         "description":"Determina si asistió a trabajar.(*) Posiblemente cambie."
+      },
+      {
+         "name":"deleted",
+         "type":"bool, NULL",
+         "description":"Determina si el registro está eliminado o no."
+      },
+      {
+         "name":"cityID",
+         "type":"int, NULL",
+         "description":"Índice de la entidad que representa la ciudad en que vive el personal. Ver a detalle en tabla cities."
+      },
+      {
+         "name":"createdAt",
+         "type":"timestamptz, NULL",
+         "description":"Fecha de creación del registro."
+      },
+      {
+         "name":"updatedAt",
+         "type":"timestamptz, NULL",
+         "description":"Última fecha de actualización del registro."
+      }
+   ]
+}
